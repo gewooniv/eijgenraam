@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Alle artikelen - Eijgenraam.net
+{% endblock title %}
+{% block css_files %}
+{% endblock css_files %}
+{% block content %}
+  <section id="all-posts">
+    <ul>
+      {% for post in posts %}
+        {% include 'pages/articles/includes/post.html' %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock body %}

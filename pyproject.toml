@@ -150,7 +150,7 @@ ignore = [
           # Deactivated because it can make the code slow:
           # https://github.com/astral-sh/ruff/issues/7871
   # Conflicts with the formatter
-  "COM812", "ISC001"
+  "COM812", "ISC001", "DJ006", "ERA001",
 ]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]

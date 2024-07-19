@@ -5,17 +5,14 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 from django.views import defaults as default_views
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView, DetailView
+
+from eijgenraamnet.articles.models import Post
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
-    ),
-    path(
-        "articles/",
-        TemplateView.as_view(template_name="pages/articles.html"),
-        name="articles",
     ),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
@@ -23,7 +20,7 @@ urlpatterns = [
     path("users/", include("eijgenraamnet.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    # ...
+    path("", include("eijgenraamnet.articles.urls")),
     # Media files
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
 ]
