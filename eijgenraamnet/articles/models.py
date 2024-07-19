@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from django.db import models as m
 from django.urls import reverse
+from tinymce.models import HTMLField
 
 
 # Create your models here.
@@ -20,7 +21,7 @@ class Post(m.Model):
     date = m.DateField()
     author = m.ForeignKey(Author, on_delete=m.SET_NULL, null=True)
     excerpt = m.TextField(max_length=200)
-    content = m.TextField(max_length=20000)
+    content = HTMLField()
 
     def __str__(self):
         return f"{self.title}, ({self.date})"

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # # Create your views here.
 
-import datetime
+import datetime as dt
 
+from dateutil import tz
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
@@ -61,7 +62,7 @@ class PostView(View):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = single_post
-            comment.date = datetime.datetime.now(tz="Europe/Amsterdam").date()
+            comment.date = dt.datetime.now(tz=tz.gettz("Europe/Amsterdam")).date()
             comment.save()
 
             return HttpResponseRedirect(reverse("post-page", args=[slug]))
