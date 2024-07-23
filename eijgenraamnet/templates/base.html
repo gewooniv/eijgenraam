@@ -66,6 +66,9 @@
                   <a class="nav-link" href="{% url 'posts' %}">Artikelen</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'gallery' %}">Fotogallerij</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="{% url 'about' %}">Over ons</a>
                 </li>
                 {% if request.user.is_authenticated %}

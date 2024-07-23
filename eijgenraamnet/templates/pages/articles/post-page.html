@@ -19,7 +19,10 @@
       <div>
         <h2>{{ post.title }}</h2>
         <div class="author">
-          <address>{{ post.author }}</address> <time>{{ post.date|date:'d M Y' }}</time>
+          <address>{{ post.author }}</address>
+        </div>
+        <div class="author">
+          <time>{{ post.date|date:'d M Y' }}</time>
         </div>
       </div>
     </header>

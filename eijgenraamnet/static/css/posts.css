@@ -1,5 +1,5 @@
   #all-posts {
-    margin: 7rem auto;
+    margin: 4rem auto;
     width: 90%;
     max-width: 60rem;
   }
@@ -17,18 +17,18 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-    gap: 1.5rem;
+    /*gap: 1.5rem;*/
   }
 
   .post img {
-    width: 7rem;
-    height: 7rem;
+    width: 9rem;
+    height: 9rem;
   }
 
   .post a {
-    height: 27rem;
+    height: 25rem;
     transform-origin: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    background-color: #e7e7e7;
+    background-color: #e7e7e7;*/
   }

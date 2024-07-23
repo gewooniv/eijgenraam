@@ -85,6 +85,7 @@ LOCAL_APPS = [
     "eijgenraamnet.users",
     # Your stuff: custom apps go here
     "eijgenraamnet.articles",
+    "eijgenraamnet.gallery",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -318,3 +319,31 @@ SOCIALACCOUNT_FORMS = {"signup": "eijgenraamnet.users.forms.UserSocialSignupForm
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+TINYMCE_DEFAULT_CONFIG = {
+    "theme": "silver",
+    "height": 600,
+    "menubar": False,
+    "plugins": [
+        "advlist",
+        "autolink",
+        "link",
+        "image",
+        "lists",
+        "charmap",
+        "preview",
+        "anchor",
+        "pagebreak",
+        "searchreplace",
+        "wordcount",
+        "visualblocks",
+        "visualchars",
+        "code",
+        "fullscreen",
+        "insertdatetime",
+        "media",
+        "table",
+        "emoticons",
+        "help",
+    ],
+    "toolbar": "undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview fullscreen | forecolor backcolor emoticons | help",
+}

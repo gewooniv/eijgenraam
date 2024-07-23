@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+  Foto gallerij - Eijgenraam.net
+{% endblock title %}
+{% block css %}
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  <link href="{% static 'css/gallery.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/post.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/lightbox.css' %}" rel="stylesheet" />
+{% endblock css %}
+{% block content %}
+  <section id="categories">
+    <ul>
+      <li>
+        <a href="{% url 'home' %}">Alle afbeelingen</a>
+      </li>
+      <li>
+        <a href="{% url 'home' %}">Diversen</a>
+      </li>
+      <li>
+        <a href="{% url 'home' %}">Kaarten</a>
+      </li>
+      <li>
+        <a href="{% url 'home' %}">Personen</a>
+      </li>
+      <li>
+        <a href="{% url 'home' %}">Prenten</a>
+      </li>
+    </ul>
+  </section>
+  <section id="gallery">
+    <ul class="picture-gallery">
+      {% for picture in pictures %}
+        <li class="picture">
+          <a href="{{ picture.image.url }}"
+             data-lightbox="{{ picture.image.url }}"
+             data-title="{{ picture.name }}">
+            <img src="{{ picture.image.url }}" alt="{{ picture.name }}" />
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <script src="{% static 'js/lightbox-plus-jquery.js' %}"></script>
+{% endblock content %}
