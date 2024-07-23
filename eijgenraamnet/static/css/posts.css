@@ -1,5 +1,5 @@
   #all-posts {
-    margin: 4rem auto;
+    margin: 3rem auto;
     width: 90%;
     max-width: 60rem;
   }
@@ -21,8 +21,10 @@
   }
 
   .post img {
-    width: 9rem;
-    height: 9rem;
+    width: 12rem;
+    height: 12rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    margin: 1rem;
   }
 
   .post a {
