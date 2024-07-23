@@ -25,7 +25,11 @@ class Post(m.Model):
     content = HTMLField()
 
     def __str__(self):
-        return f"{self.title}, ({self.date})"
+        return (
+            f"{self.title}, (featured), ({self.date})"
+            if self.featured
+            else f"{self.title}, ({self.date})"
+        )
 
     def get_absolute_url(self):
         return reverse("post-page", args=[self.slug])

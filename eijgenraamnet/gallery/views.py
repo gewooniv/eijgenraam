@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-from django.shortcuts import render
+from django_filters.views import FilterView
 
+from .filtersets import PictureFilter
 from .models import Picture
 
 
 # Create your views here.
-def index(request):
-    pictures = Picture.objects.all()
-    context = {"pictures": pictures}
-    return render(request, "../templates/pages/gallery/gallery.html", context)
+class PostList(FilterView):
+    template_name = "../templates/pages/gallery/gallery.html"
+    model = Picture
+    context_object_name = "pictures"
+    filterset_class = PictureFilter

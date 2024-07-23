@@ -6,28 +6,15 @@
   Foto gallerij - Eijgenraam.net
 {% endblock title %}
 {% block content %}
-  <section id="categories">
-    <ul>
-      <li>
-        <a href="{% url 'home' %}">Alle afbeelingen</a>
-      </li>
-      <li>
-        <a href="{% url 'home' %}">Diversen</a>
-      </li>
-      <li>
-        <a href="{% url 'home' %}">Kaarten</a>
-      </li>
-      <li>
-        <a href="{% url 'home' %}">Personen</a>
-      </li>
-      <li>
-        <a href="{% url 'home' %}">Prenten</a>
-      </li>
-    </ul>
+  <section id="category">
+    <form action="" method="get">
+      {{ filter.form.as_p }}
+      <input type="submit" />
+    </form>
   </section>
   <section id="gallery">
     <ul class="picture-gallery">
-      {% for picture in pictures %}
+      {% for picture in filter.qs %}
         <li class="picture">
           <a href="{{ picture.image.url }}"
              data-lightbox="{{ picture.image.url }}"

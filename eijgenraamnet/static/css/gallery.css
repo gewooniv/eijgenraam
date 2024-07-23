@@ -1,4 +1,8 @@
-ul {
+#category {
+  text-align: right;
+  }
+
+  #gallery ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -6,44 +10,8 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
   }
 
-  #categories {
-    background-color: white;
-    padding: 0.5rem;
-    border-radius: 12px;
-    width: 60rem;
-    margin: -6rem auto 2rem auto;
-    margin-top: 1rem;
-  }
-
-  #categories h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #2e2e2e;
-    margin: 3rem 0;
-  }
-
-  #categories ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-  }
-
-  #categories li {
-    flex: 1;
-    text-align: center;
-  }
-
-  #categories a {
-    text-decoration: none;
-    color: black;
-    transition: all 0.2s ease;
-    padding: 1rem;
-  }
-
   #gallery {
-    margin: 5rem auto;
+    margin: 3rem auto;
     width: 90%;
     max-width: 90rem;
   }
