@@ -64,5 +64,5 @@ ul {
   }
 
   .picture img:hover {
-    border: 5px solid #fff;
+    transform: scale(1.1);
   }
