@@ -1,6 +1,6 @@
 # Eijgenraam.net
 
-This is a project to share insights of our family history and genealogy with others. The current website is outdated and to be replaced by this one. 
+This is a project to share insights of our family history and genealogy with others. The current website is outdated and to be replaced by this one.
 
 The current requirements are:
 * an admin panel to add posts/articles
