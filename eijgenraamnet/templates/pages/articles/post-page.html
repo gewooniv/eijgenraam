@@ -5,19 +5,11 @@
 {% block title %}
   {{ post.title }} - Eijgenraam.net
 {% endblock title %}
-{% block css %}
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
-        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-  <link href="{% static 'css/post-page.css' %}" rel="stylesheet" />
-{% endblock css %}
 {% block content %}
   <section id="welcome">
     <header>
       <div>
-        <h2>{{ post.title }}</h2>
+        <h1>{{ post.title }}</h1>
         <div class="author">
           <address>{{ post.author }}</address>
         </div>

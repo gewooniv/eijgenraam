@@ -1,8 +1,19 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
   <h1>Main page title</h1>
   <div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non odio euismod lacinia at. Velit egestas dui id ornare. Diam donec adipiscing tristique risus. Pellentesque nec nam aliquam sem et tortor consequat. Libero justo laoreet sit amet cursus sit amet dictum sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Leo vel orci porta non. Mauris augue neque gravida in fermentum. Blandit turpis cursus in hac. Aliquam faucibus purus in massa. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Orci eu lobortis elementum nibh. Tempor commodo ullamcorper a lacus. A diam sollicitudin tempor id eu. Magna etiam tempor orci eu lobortis elementum nibh. Varius morbi enim nunc faucibus a pellentesque sit. Quis vel eros donec ac odio tempor. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Morbi tristique senectus et netus et malesuada. Mattis enim ut tellus elementum sagittis vitae et leo duis. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Purus ut faucibus pulvinar elementum integer enim neque. Tortor vitae purus faucibus ornare suspendisse sed. Mauris cursus mattis molestie a iaculis. Massa id neque aliquam vestibulum morbi blandit. Turpis massa tincidunt dui ut.
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non odio euismod lacinia at. Velit egestas dui id ornare. Diam donec adipiscing tristique risus. Pellentesque nec nam aliquam sem et tortor consequat. Libero justo laoreet sit amet cursus sit amet dictum sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Leo vel orci porta non. Mauris augue neque gravida in fermentum. Blandit turpis cursus in hac. Aliquam faucibus purus in massa. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Orci eu lobortis elementum nibh. Tempor commodo ullamcorper a lacus. A diam sollicitudin tempor id eu. Magna etiam tempor orci eu lobortis elementum nibh. Varius morbi enim nunc faucibus a pellentesque sit. Quis vel eros donec ac odio tempor. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Morbi tristique senectus et netus et malesuada. Mattis enim ut tellus elementum sagittis vitae et leo duis. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Purus ut faucibus pulvinar elementum integer enim neque. Tortor vitae purus faucibus ornare suspendisse sed. Mauris cursus mattis molestie a iaculis. Massa id neque aliquam vestibulum morbi blandit. Turpis massa tincidunt dui ut.
+    </p>
   </div>
+  <section id="all-posts">
+    <ul>
+      {% for post in featured_posts %}
+        {% include 'pages/articles/includes/post.html' %}
+      {% endfor %}
+    </ul>
+  </section>
 {% endblock content %}

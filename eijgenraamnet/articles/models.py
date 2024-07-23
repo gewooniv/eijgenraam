@@ -19,6 +19,7 @@ class Post(m.Model):
     slug = m.SlugField(default="", blank=True, null=False, db_index=True)
     header_image = m.ImageField(upload_to="static/images/", null=True)
     date = m.DateField()
+    featured = m.BooleanField(null=True, default=False)
     author = m.ForeignKey(Author, on_delete=m.SET_NULL, null=True)
     excerpt = m.TextField(max_length=200)
     content = HTMLField()

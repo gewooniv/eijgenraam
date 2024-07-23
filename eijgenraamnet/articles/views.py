@@ -29,11 +29,11 @@ class MainPageView(ListView):
     template_name = "../templates/pages/articles/posts.html"
     model = Post
     ordering = ["-date"]
-    context_object_name = "latest_posts"
+    context_object_name = "featured_posts"
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset[:3]
+        return queryset.filter(featured=True)
 
 
 class PostsView(ListView):

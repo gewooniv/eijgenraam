@@ -12,7 +12,7 @@ ul {
     border-radius: 12px;
     width: 60rem;
     margin: -6rem auto 2rem auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   #categories h2 {
@@ -33,6 +33,13 @@ ul {
   #categories li {
     flex: 1;
     text-align: center;
+  }
+
+  #categories a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease;
+    padding: 1rem;
   }
 
   #gallery {
