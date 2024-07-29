@@ -31,7 +31,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: 'Host(`eijgenraam.net`) || Host(`www.eijgenraam.net`)'
+      rule: 'Host(`eijgenra.am`) || Host(`www.eijgenra.am`)'
       entryPoints:
         - web-secure
       middlewares:
@@ -42,7 +42,7 @@ http:
         certResolver: letsencrypt
 
     flower-secure-router:
-      rule: 'Host(`eijgenraam.net`)'
+      rule: 'Host(`eijgenra.am`)'
       entryPoints:
         - flower
       service: flower
@@ -51,7 +51,7 @@ http:
         certResolver: letsencrypt
 
     web-media-router:
-      rule: '(Host(`eijgenraam.net`) || Host(`www.eijgenraam.net`)) && PathPrefix(`/media/`)'
+      rule: '(Host(`eijgenra.am`) || Host(`www.eijgenra.am`)) && PathPrefix(`/media/`)'
       entryPoints:
         - web-secure
       middlewares:

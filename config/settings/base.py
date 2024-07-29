@@ -346,5 +346,5 @@ TINYMCE_DEFAULT_CONFIG = {
         "emoticons",
         "help",
     ],
-    "toolbar": "undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview fullscreen | forecolor backcolor emoticons | help",
+    "toolbar": "undo redo copy paste | styles | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview fullscreen | forecolor backcolor emoticons | help",
 }
