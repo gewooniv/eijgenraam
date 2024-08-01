@@ -71,6 +71,8 @@ services:
     <<: *django
     image: eijgenraamnet_production_flower
     command: /start-flower
+    depends_on:
+      - celeryworker
 
   nginx:
     build:
